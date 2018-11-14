@@ -1,0 +1,71 @@
+commit 3448a00e13bd1a4ee6aedc79d4ac7e339d6cf242
+Author: jlinick <Justin.P.Linick@jpl.nasa.gov>
+Date:   Wed Oct 24 18:14:29 2018 +0000
+
+    adding tests
+
+commit 374fdb6a225edbce8cfddacb8d5efd903d87fcbe
+Author: jlinick <Justin.P.Linick@jpl.nasa.gov>
+Date:   Wed Oct 24 16:15:31 2018 +0000
+
+    adding speedups
+
+commit 675bba2793775299623a0eb456cd76ad90a5a954
+Author: jlinick <Justin.P.Linick@jpl.nasa.gov>
+Date:   Wed Oct 24 15:55:10 2018 +0000
+
+    self-intersection handling
+
+commit c97e9f5b6e2ca9c9f140454362504b82ad259e6d
+Author: jlinick <Justin.P.Linick@jpl.nasa.gov>
+Date:   Tue Oct 23 16:26:45 2018 +0000
+
+    add antimeridian test
+
+commit c976615990e788f4f21f22eaa330b78d1f70d509
+Author: jlinick <Justin.P.Linick@jpl.nasa.gov>
+Date:   Tue Oct 16 18:24:45 2018 +0000
+
+    use geopandas for shapefile loading
+
+commit 9ea038e21d70dbf92f0fef989e3b4af09d2a8e1a
+Author: jlinick <Justin.P.Linick@jpl.nasa.gov>
+Date:   Tue Oct 2 09:36:28 2018 -0700
+
+    update version
+
+commit 8fd0bbe61ee6aa363f45d081c4fcfa8e3a22e22c
+Author: jlinick <Justin.P.Linick@jpl.nasa.gov>
+Date:   Tue Sep 25 12:41:13 2018 -0700
+
+    skip dependency requirement
+
+commit 5d1901a4c5e63cbecaa53f0c7ad9504c5ceaf217
+Author: jlinick <Justin.P.Linick@jpl.nasa.gov>
+Date:   Mon Sep 10 12:39:14 2018 -0700
+
+    update to return geojson polygons
+
+commit 567b6cd34ab977f2c2e90de6fbef5be521c4851a
+Author: jlinick <Justin.P.Linick@jpl.nasa.gov>
+Date:   Fri Aug 24 21:14:13 2018 +0000
+
+    add area and percentage calculation
+
+commit d5fcb5bbaa260e216dec6a1f80689ccfcbdb0c1b
+Author: jlinick <Justin.P.Linick@jpl.nasa.gov>
+Date:   Wed Aug 22 21:41:46 2018 +0000
+
+    add comments & update readme
+
+commit 63209c81f049843f558ca3b8f71e72e7dc626db4
+Author: jlinick <Justin.P.Linick@jpl.nasa.gov>
+Date:   Mon Aug 20 19:41:22 2018 +0000
+
+    added area- issue with some input shapes
+
+commit 7eb162b334b59918916add24dcea68cac6069b8b
+Author: jlinick <Justin.P.Linick@jpl.nasa.gov>
+Date:   Fri Aug 17 00:12:04 2018 +0000
+
+    initial commit
