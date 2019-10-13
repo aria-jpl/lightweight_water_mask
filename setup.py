@@ -13,7 +13,8 @@ setup(
     description="Water mask utility, using OpenStreetMap water shapefiles",
     author="Justin Linick",
     author_email="Justin.P.Linick@jpl.nasa.gov",
-    packages=find_packages(),
-    py_modules=['geopandas', 'shapely', 'fiona', 'pyproj'],
+    # packages=find_packages(),
+    # py_modules=['geopandas', 'shapely', 'fiona', 'pyproj'],
+    install_requires=['geopandas', 'shapely', 'fiona', 'pyproj'],
     data_files=data_files
 )
