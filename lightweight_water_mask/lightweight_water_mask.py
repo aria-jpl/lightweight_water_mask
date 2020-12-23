@@ -12,11 +12,14 @@ from past.utils import old_div
 import os
 import json
 import pyproj
+from pyproj import Transformer
+from pyproj import CRS
 from functools import partial
 from shapely.geometry import shape, Polygon, MultiPolygon, mapping
 from shapely.ops import cascaded_union
 from shapely.validation import explain_validity
 import shapely.ops
+from shapely.ops import transform
 from shapely import speedups
 import fiona
 
@@ -114,8 +117,12 @@ def get_water_polygons(geojson):
 def get_area(geojson):
     '''Returns the area of the polygon'''
     geojson = validate_geojson(geojson)
-    newshape = shapely.ops.transform(partial(pyproj.transform, pyproj.Proj("EPSG:4326"),
-                                     pyproj.Proj(proj='aea')), geojson)
+    #newshape = shapely.ops.transform(partial(pyproj.transform, pyproj.Proj("EPSG:4326"), pyproj.Proj(proj='aea')), geojson)
+    # pyproj > v2.1 has interface changes that require the following changes:
+    proj_1 = pyproj.CRS('EPSG:4326')
+    proj_2 = pyproj.CRS("+proj=aea +lat_1=1 +lat_2=2") # first and second parallels set to near the equator
+    project = Transformer.from_crs(proj_1, proj_2).transform
+    newshape = transform(project, geojson)
     return old_div(newshape.area, 10.0**6)
 
 def get_shapes(oftype='land'):
