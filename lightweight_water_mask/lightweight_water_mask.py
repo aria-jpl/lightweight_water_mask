@@ -114,7 +114,7 @@ def get_water_polygons(geojson):
 def get_area(geojson):
     '''Returns the area of the polygon'''
     geojson = validate_geojson(geojson)
-    newshape = shapely.ops.transform(partial(pyproj.transform, pyproj.Proj(init='EPSG:4326'),
+    newshape = shapely.ops.transform(partial(pyproj.transform, pyproj.Proj("EPSG:4326"),
                                      pyproj.Proj(proj='aea')), geojson)
     return old_div(newshape.area, 10.0**6)
 
