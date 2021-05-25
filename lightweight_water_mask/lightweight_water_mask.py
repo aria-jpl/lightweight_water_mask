@@ -121,7 +121,7 @@ def get_area(geojson):
     # pyproj > v2.1 has interface changes that require the following changes:
     proj_1 = pyproj.CRS('EPSG:4326')
     proj_2 = pyproj.CRS("+proj=aea +lat_1=1 +lat_2=2") # first and second parallels set to near the equator
-    project = Transformer.from_crs(proj_1, proj_2).transform
+    project = Transformer.from_crs(proj_1, proj_2, always_xy=True).transform
     newshape = transform(project, geojson)
     return old_div(newshape.area, 10.0**6)
 
